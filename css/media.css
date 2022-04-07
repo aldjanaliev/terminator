@@ -54,11 +54,13 @@
   .contacts .wa_flex span{
     display: none;
   }
-  .practic_info p{
-    font-size: 35px;
-  }
+  .practic_info p,
+  .prepaid_title,
   .observ_txt{
     font-size: 35px;
+  }
+  .prepaid_desc{
+    font-size: 28px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -112,7 +114,7 @@
     height: auto;
   }
   .object_right{
-    width: 100%;
+    width: calc(100% - 30px);
     padding: 0;
     max-width: 585px;
     margin: 0 auto;
@@ -222,6 +224,26 @@
   }
   .observ_txt::before{
     display: none;
+  }
+  .recycle_flex{
+    flex-direction: column;
+    padding-bottom: 15px;  }
+  .recycle_flex__reverse{
+    flex-direction: column-reverse;
+  }
+  .recycle_img,
+  .recycle_info-wrap,
+  .recycle_info-right{
+    margin: 0 auto 20px;
+    width: 100%;
+    max-width: 450px;
+    padding: 0;
+  }
+  .main_bot-items{
+    flex-direction: column;
+  }
+  .main_item{
+    margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 770px) {
@@ -411,7 +433,7 @@
     text-align: center;
     margin: 0 auto;
     width: 100%;
-    max-width: 400px;
+    max-width: 400px; 
   }
   .observ{
     flex-direction: column;
@@ -421,6 +443,131 @@
   }
   .observ_img::before{
     display: none;
+  }
+  .poster{
+    background: none;
+    padding: 10px 0 40px;
+    width: auto;
+    height: auto;
+  }
+  .poster p{
+    font-size: 22px;
+    padding-bottom: 10px;
+    line-height: 1.3;
+  }
+  .poster span{
+    font-size: 16px;
+    padding-bottom: 20px;
+  }
+  .prepaid_title{
+    font-size: 18px;
+    padding-bottom: 0;
+    line-height: 35px;
+  }
+  .prepaid_title i{
+    line-height: 1.5;
+  }
+  .prepaid_desc{
+    font-size: 16px;
+  }
+  .prepaid_logo{
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .prepaid_txt-title{
+    font-size: 18px;
+    line-height: 1.1;
+  }
+  .prepaid_flex-wrap{
+    flex-direction: column;
+  }
+  .prepaid_flex{
+    width: 100%;
+    margin-bottom: 20px;
+    padding-left: 10px;
+  }
+  .recycle_info-in,
+  .recycle_info{
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .recycle_title{
+    font-size: 18px;
+    padding-bottom: 0;
+    line-height: 1.3;
+  }
+  .recycle_list{
+    font-size: 16px;
+  }
+  .recycle_txt{
+    font-size: 16px;
+    line-height: 1.3;
+  }
+  .recycle_info-in__flex .recycle_txt{
+    font-size: 18px;
+    line-height: 1.3;
+    padding-left: 0;
+  }
+  .recycle_info-in__flex .recycle_txt::before{
+    display: none;
+  }
+  .recycle_flex{
+    padding: 0;
+  }
+  .park_title{
+    font-size: 18px;
+    padding: 10px 0;
+  }
+  .park{
+    margin: 0 -10px;
+  }
+  .park_card{
+    width: calc(50% - 10px);
+    margin: 0 5px;
+  }
+  .park .tech_logo{
+    display: none;
+  }
+  .cycle{
+    columns: 1;
+  }
+  .main-in{
+    flex-wrap: wrap;
+  }
+  .main_left{
+    width: 100%;
+    padding: 0;
+  }
+  .main_right{
+    width: 100%;
+  }
+  .main_desc{
+    line-height: 1.1;
+    font-size: 20px;
+    padding: 8px 0 20px 0;
+    text-align: center;
+    background: none;
+  }
+  .main_title{
+    padding: 20px 0 0;
+    font-size: 26px;
+    text-align: center;
+  }
+  .main_video{
+    margin: 0 auto 20px;
+  }
+  .main_bot-desc{
+    font-size: 20px;
+  }
+  .main_item{
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .main_bot{
+    width: 250px;
+    margin: 0 auto;
+    padding-bottom: 30px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -475,5 +622,19 @@
   .license_acc-body__active {
     flex-direction: column;
     justify-content: center;
+  }
+  .park{
+    margin: 0 -10px;
+  }
+  .park_card{
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  .park .tech_logo{
+    display: block;
+  }
+  .park_txt{
+    padding: 8px 0 10px;
   }
 }

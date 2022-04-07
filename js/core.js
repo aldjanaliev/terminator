@@ -114,4 +114,11 @@ if(document.querySelectorAll('.license_acc-head')){
 		})
 }
 
-
+// close video
+if(document.querySelector('.license_acc-head')){
+	let mainVideo = document.querySelector('.main_video')
+	let mainVideoClose = document.querySelector('.main_video-close')
+	mainVideoClose.onclick = function(){
+		mainVideo.style.display = 'none'
+	}
+}
