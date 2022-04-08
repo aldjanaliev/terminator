@@ -353,7 +353,7 @@ body {
   padding-bottom: 40px;
 }
 .mobile-wrap-active{
-  overflow-y: scroll;
+  overflow-y: auto;
   padding-bottom: 10px;
 }
 .mobile-wrap-in{
@@ -1158,7 +1158,7 @@ footer .scroll_static {
   width: 391px;
   border: 1px solid #E8E8E8;
   border-radius: 8px;
-  padding: 40px 12px;
+  padding: 40px 12px 15px;
 }
 .keys{
   border: 1px solid #E8E8E8;
@@ -2030,4 +2030,104 @@ footer .scroll_static {
 }
 .main_video-close:hover{
   transform: scale(1.1);
+}
+
+/*modal*/
+.modal-wrap{
+  padding: 40px 47px 48px;
+  border-radius: 8px;
+  display: none;
+}
+.modal-wrap_dismantling{
+  max-width: 445px;
+}
+.modal_title{
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+  padding-bottom: 33px;
+}
+.modal_input-wrap{
+  padding-bottom: 24px;
+}
+.modal_input-desc{
+  display: block;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+.modal_input{
+  width: 100%;
+  text-align: center;
+  line-height: 48px;
+  padding: 0 10px;
+  border: 1px solid #C2C2C2;
+  border-radius: 8px;
+}
+.modal_input-wrap__file .modal_input-desc{
+  text-align: center;
+  font-size: 14px;
+}
+.modal_input-wrap__file .form_file-title{
+  line-height: 48px;
+  padding-left: 16px;
+  font-size: 16px;
+}
+.modal_input-wrap__file .form_file-btn{
+  line-height: 48px;
+  width: 117px;
+}
+.modal_btn{
+  line-height: 48px;
+  width: 100%;
+}
+.thanks_txt{
+  text-align: center;
+  font-size: 18px;
+  line-height: 30px;
+}
+.modal_in{
+  display: flex;
+}
+.modal_left{
+  width: calc(100% - 364px);
+  padding-right: 20px;
+}
+.modal_consutation-title{
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 30px;
+  padding-bottom: 29px;
+  display: block;
+}
+.modal_desc{
+  font-size: 23px;
+  line-height: 30px;
+  padding-bottom: 13px;
+}
+.modal_left ul{
+  padding-left: 20px;
+  position: relative;
+}
+.modal_left ul::before{
+  content: '';
+  width: 230px;
+  height: 79px;
+  bottom: -80px;
+  left: 150px;
+  position: absolute;
+  background: url(../img/icons/arrow-b.svg) center no-repeat;
+  transform: scale(-1, 1);
+}
+.modal_list{
+  font-size: 18px;
+  line-height: 23px;
+  list-style-type: disc;
+  max-width: 330px;
+}
+.modal_right{
+  padding: 30px;
+  border: 1px solid #000000;
+  border-radius: 8px;
 }

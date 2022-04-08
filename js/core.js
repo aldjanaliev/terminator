@@ -65,6 +65,15 @@ $(document).ready(function() {
 		    asNavFor: $(this).find('.object_slider'),
 		  });
   	});
+
+  	if(document.querySelectorAll('.dismantling_btn')){
+	let modalBtn = [...document.querySelectorAll('.dismantling_btn')]
+	modalBtn.forEach(item => {
+		item.onclick = function(){
+				$.fancybox.close()
+			}
+		})
+	}
 })
 
 // contacts-acc
@@ -122,3 +131,13 @@ if(document.querySelector('.license_acc-head')){
 		mainVideo.style.display = 'none'
 	}
 }
+
+// modal-btn
+// if(document.querySelectorAll('.dismantling_btn')){
+// 	let modalBtn = [...document.querySelectorAll('.dismantling_btn')]
+// 	modalBtn.forEach(item => {
+// 		item.onclick = function(){
+// 			this.closest('.modal-wrap').display = 'none'
+// 		}
+// 	})
+// }

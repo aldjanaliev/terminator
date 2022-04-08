@@ -245,6 +245,9 @@
   .main_item{
     margin-bottom: 20px;
   }
+  .modal_left ul::before{
+    display: none;
+  }
 }
 @media screen and (max-width: 770px) {
   .section{
@@ -568,6 +571,23 @@
     width: 250px;
     margin: 0 auto;
     padding-bottom: 30px;
+  }
+  .modal-wrap{
+    padding: 30px;
+  }
+  .modal_in{
+    flex-wrap: wrap;
+  }
+  .modal_left{
+    width: 100%;
+    padding: 0 0 20px;
+  }
+  .modal_right{
+    width: 100%;
+  }
+  .modal_consutation-title,
+  .modal_title{
+    padding-bottom: 10px;
   }
 }
 @media screen and (max-width: 480px) {
