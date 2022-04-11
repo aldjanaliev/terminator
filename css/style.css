@@ -1026,14 +1026,12 @@ footer .scroll_static {
 }
 .contacts_map-list::before{
   content: '';
+  width: 15px;
+  height: 7px;
   position: absolute;
-  top: 21px;
-  right: 22px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 6px 6.5px 0 6.5px;
-  border-color: #EA961B transparent transparent transparent;
+  top: 20px;
+  right: 19px;
+  background: url(../img/icons/arrow-orange-list.svg) center no-repeat;
 }
 .contacts_map-title{
   line-height: 50px;
@@ -2130,4 +2128,208 @@ footer .scroll_static {
   padding: 30px;
   border: 1px solid #000000;
   border-radius: 8px;
+}
+.quest_list{
+  font-size: 16px;
+  line-height: 24px;
+  padding-bottom: 40px;
+}
+.quest .object_list::before{
+  top: 10px;
+}
+.modal_inputs{
+  display: flex;
+  justify-content: space-between;
+}
+.modal_inputs .modal_input{
+  width: calc(33.33% - 13px);
+}
+.modal_selects{
+  display: flex;
+  padding-bottom: 20px;
+  justify-content: space-between;
+}
+.select-wrap{
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid #C2C2C2;
+  overflow: hidden;
+  width: calc(33.33% - 13px);
+  padding: 0 39px 0 32px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.quiz_select::before{
+  content: '';
+  width: 15px;
+  height: 7px;
+  position: absolute;
+  top: 20px;
+  right: 19px;
+  background: url(../img/icons/arrow-orange-list.svg) center no-repeat;
+} 
+.modal_input__big{
+  width: calc(66.67% - 9px);
+  align-self: flex-start;
+}
+.quiz_select{
+  line-height: 48px;
+}
+.select_default{
+  color: #5B5B5B;
+}
+.select_active{
+  order: -1;
+}
+.choose-in{
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 26px;
+  justify-content: space-between;
+}
+.choose_half{
+  width: calc(50% - 10px);
+}
+.choose{
+  padding: 35px 0;
+  border-top: 1px dashed #EA961B;
+  border-bottom: 1px dashed #EA961B;
+}
+.ch{
+  display: block;
+}
+.card_check{
+  display: block;
+  cursor: pointer;
+  line-height: 37px;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 48px;
+}
+.ch:last-child .card_check{
+  margin-bottom: 0;
+}
+.card_check::before{
+  content: '';
+  position: absolute;
+  width: 37px;
+  height: 37px;
+  top: 0;
+  left: 0;
+  border: 1px solid #EA961B;
+  border-radius: 3px;
+  transition: 0.3s;
+  background-position: center;
+}
+.ch input{
+  display: none;
+}
+input[type="checkbox"]:checked+span::before{
+  background: #EA961B url(../img/icons/checkbox.svg) center no-repeat;
+}
+.quest_bot{
+  padding: 35px;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid #000;
+  border-radius: 8px;
+  margin: 40px 0 0;
+}
+.calendare{
+  max-width: 400px;
+  width: 100%;
+}
+.calendare-in{
+  display: none;
+}
+.quest_form-wrap{
+  max-width: 400px;
+  width: 100%;
+}
+.quest_bot .modal_consutation-title{
+  text-align: center;
+}
+.quest_form{
+  max-width: 350px;
+  margin: 0 auto;
+}
+.quest_form-desc{
+  padding-bottom: 12px;
+}
+.quest .detail_file{
+  max-width: 100%;
+}
+.quest .form_file-title{
+  line-height: 46px;
+  font-size: 16px;
+  padding: 0 16px;
+}
+.quest .form_file-btn{
+  width: 117px;
+  line-height: 46px;
+}
+.btn-quest{
+  width: 100%;
+  line-height: 46px;
+  font-size: 16px;
+  text-transform: none;
+  margin-bottom: 12px;
+}
+.ch-policy{
+  font-size: 14px;
+  line-height: 20px;
+  padding-left: 35px;
+}
+.ch-policy::before{
+  width: 20px;
+  height: 20px;
+}
+.datepicker{
+  border: none;
+  width: 340px;
+  font-family: "PT Sans";
+  margin: 0 auto;
+}
+.datepicker--nav{
+  background: rgba(234, 150, 27, 0.1);
+  border-radius: 4px;
+  font-size: 18px;
+}
+.datepicker--nav-action path{
+  stroke: #EA961B;
+}
+.datepicker--day-name{
+  font-size: 14px;
+  color: #000;
+  padding-bottom: 12px;
+}
+.datepicker--cells{
+  margin: -4px;
+}
+.datepicker--cell-day{
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  margin: 4px;
+  line-height: 30px;
+  justify-content: end;
+  padding-right: 7px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.datepicker--cell.-selected-, 
+.datepicker--cell.-selected-.-current-,
+.datepicker--cell.-range-to-,
+.datepicker--cell.-selected-.-focus-{
+  background: #EA961B;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+}
+.datepicker--cell.-in-range-{
+  background: rgba(234, 150, 27, 0.1);
+  border-radius: 4px;
+  border: none;
 }

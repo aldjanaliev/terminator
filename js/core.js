@@ -74,6 +74,16 @@ $(document).ready(function() {
 			}
 		})
 	}
+
+	// calendare
+	$(function(){
+		$('#calendare').datepicker({
+			multipleDates: 2,
+			range: true,
+			multipleDatesSeparator: ' - ',
+			inline: true
+		})
+	})
 })
 
 // contacts-acc
@@ -100,6 +110,36 @@ if(document.querySelector('.contacts_map-list')){
 				})
 				contactsAccBody[contactsAccIndex].classList.add('contacts_map-body__active')
 			}
+		}
+	})
+}
+
+// modal_quest-acc
+if(document.querySelectorAll('.select-wrap')){
+	let selectAccHead = document.querySelectorAll('.select-wrap')
+	selectAccHead.forEach(item => {
+		item.onclick = function(){
+			if(this.style.height == '50px'){
+				this.style.height = item.children.length * 50 + 'px'
+			} else{
+				this.style.height = '50px'
+			}
+			let selectItem = item.querySelectorAll('.quiz_select')
+			selectItem.forEach(item => {
+				item.onclick = function(){
+					if(!this.classList.contains('select_active')){
+						let selectItemParent = this.parentElement
+						let selectItemActive = selectItemParent.querySelector('.select_active')
+						selectItemActive.classList.remove('select_active')
+						this.classList.add('select_active')
+						if(selectItemParent.querySelector('.select_default')){
+							let selectItemDefault = selectItemParent.querySelector('.select_default')
+							selectItemDefault.remove()
+						}
+					}
+				}
+			})
+
 		}
 	})
 }

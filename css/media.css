@@ -248,6 +248,24 @@
   .modal_left ul::before{
     display: none;
   }
+  .card_check{
+    line-height: 20px;
+    padding-left: 35px;
+    margin-bottom: 8px;
+  }
+  .card_check::before{
+    width: 20px;
+    height: 20px;
+  }
+  .quest_bot{
+    flex-wrap: wrap;
+    padding: 0;
+    border: none;
+    margin-top: 20px;
+  }
+  .calendare{
+    padding-bottom: 30px;
+  }
 }
 @media screen and (max-width: 770px) {
   .section{
@@ -589,6 +607,35 @@
   .modal_title{
     padding-bottom: 10px;
   }
+  .choose_half{
+    width: 100%;
+    padding: 0 0 8px;
+  }
+  .choose-in{
+    padding: 0;
+  }
+  .choose{
+    padding: 20px 0;
+  }
+  .quest_list{
+    padding-bottom: 10px;
+  }
+  .modal_inputs,
+  .modal_selects{
+    flex-wrap: wrap;
+    max-width: 400px;
+  }
+  .modal_inputs .modal_input{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .select-wrap{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .modal_input__big{
+    width: 100%;
+  }
 }
 @media screen and (max-width: 480px) {
   .tech_logo{
@@ -656,5 +703,17 @@
   }
   .park_txt{
     padding: 8px 0 10px;
+  }
+  .btn-quest,
+  .quest .form_file-title{
+    font-size: 12px;
+  }
+  .datepicker{
+    width: 100%;
+    max-width: 340px;
+  }
+  .datepicker--cell-day,
+  .datepicker--cells{
+    margin: 0;
   }
 }

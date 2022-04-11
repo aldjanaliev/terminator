@@ -7,6 +7,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700&family=PT+Sans:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/fancybox.min.css">
 	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/datepicker.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/media.css">
 </head>
@@ -490,7 +491,7 @@
 			<div class="poster">
 				<p>Заполните Техническое задание</p>
 				<span>Чтобы сэкономить время на расспросах нами о вашем объекте</span>
-				<a href="#" class="btn">Заполнить ТЗ</a>
+				<a href="#modal_quest" class="btn" data-fancybox>Заполнить ТЗ</a>
 			</div>
 		</div>
 	</section> 
@@ -754,6 +755,140 @@
 			</div>
 		</form>
 	</div>
+<!-- Анкета -->
+	<div id="modal_quest" class="modal-wrap">
+		<form action="">
+			<div class="quest">
+				<span class="modal_consutation-title">Заполнив эту форму Вы:</span>
+				<ul class="quest_list">
+					<li class="object_list">Сэкономите время для расспросов нами вас о вашем объекте.</li>
+					<li class="object_list">Мы сразу приступим к расчету стоимости работ.</li>
+					<li class="object_list">В течение 15 минут мы отправим Вам ПДФ книгу о демонтаже зданий c разрешительной документацией для сноса.</li>
+				</ul>
+				<div class="modal_input-wrap">
+					<span class="modal_input-desc">Введите ваш номер</span>
+					<div class="modal_inputs">
+						<input type="text" class="modal_input" placeholder="Ф. И. О., должность">
+						<input type="text" class="modal_input" placeholder="Наименование организации">
+						<input type="text" class="modal_input" placeholder="Город">
+					</div>
+				</div>
+				<div class="modal_input-wrap">
+					<span class="modal_input-desc">Контактная информация</span>
+					<div class="modal_inputs">
+						<input type="tel" class="modal_input" placeholder="Телефон">
+						<input type="mail" class="modal_input" placeholder="Электронная почта">
+						<input type="text" class="modal_input" placeholder="Адрес объекта">
+					</div>
+				</div>
+				<div class="modal_input-wrap">
+					<span class="modal_input-desc">Информация об объекте монтажа</span>
+					<div class="modal_selects">
+						<ul class="select-wrap" style="height: 50px">
+							<li class="quiz_select select_default select_active">Назначение объекта</li>
+							<li class="quiz_select">Гражданское</li>
+							<li class="quiz_select">Административное</li>
+							<li class="quiz_select">Промышленное</li>
+						</ul>
+						<input type="text" class="modal_input modal_input__big" placeholder="Габаритные размеры: Длина / Ширина / Высота">
+					</div>
+					<div class="modal_selects">
+						<ul class="select-wrap" style="height: 50px">
+							<li class="quiz_select select_default select_active">До какого уровня</li>
+							<li class="quiz_select">До нулевого уровня</li>
+							<li class="quiz_select">С фундаментом</li>
+						</ul>
+						<input type="text" class="modal_input modal_input__big" placeholder="Материал конструкции: кирпич / железобетон / плиты / металл / дерево">
+					</div>
+				</div>
+				<div class="choose">
+					<span class="modal_consutation-title">Выберите, какие работы и услуги необходимо выполнить</span>
+					<div class="choose-in">
+						<div class="choose_half">
+							<label class="ch">
+		 						<input type="checkbox">
+		 						<span class="card_check">Проведение технического обследования здания</span>
+			 				</label>
+			 				<label class="ch">
+		 						<input type="checkbox">
+		 						<span class="card_check">Разработка тех.регламента по обращению с отходами</span>
+			 				</label>
+			 				<label class="ch">
+		 						<input type="checkbox">
+		 						<span class="card_check">Разработка проекта организации демонтажа (ПОД)</span>
+			 				</label>
+			 				<label class="ch">
+		 						<input type="checkbox">
+		 						<span class="card_check">Оформление разрешительной документации на демонтаж</span>
+			 				</label>
+			 				<label class="ch">
+		 						<input type="checkbox">
+		 						<span class="card_check">Ограждение строительной площадки</span>
+			 				</label>
+			 				<label class="ch">
+		 						<input type="checkbox">
+		 						<span class="card_check">Отклонение и перенос инженерных сетей</span>
+			 				</label>
+			 				<label class="ch">
+		 						<input type="checkbox">
+		 						<span class="card_check">Сохранение примыкающих зданий</span>
+			 				</label>
+						</div>
+						<div class="choose_half">
+							<label class="ch">
+		 						<input type="checkbox">
+		 						<span class="card_check">Сохранение материалов</span>
+			 				</label>
+			 				<label class="ch">
+		 						<input type="checkbox">
+		 						<span class="card_check">Вывоз/утилизация строительных отходов</span>
+			 				</label>
+			 				<label class="ch">
+		 						<input type="checkbox">
+		 						<span class="card_check">Дробление железобетонных отходов во вторичный щебень</span>
+			 				</label>
+			 				<label class="ch">
+		 						<input type="checkbox">
+		 						<span class="card_check">Разработка котлована</span>
+			 				</label>
+			 				<label class="ch">
+		 						<input type="checkbox">
+		 						<span class="card_check">Рекультивация и планировка территории </span>
+			 				</label>
+						</div>
+					</div>
+				</div>
+				<div class="quest_bot">
+					<div class="calendare">
+						<span class="modal_consutation-title">Выберите, ориентировочное <br>начало работ</span>
+						<input type="text" id="calendare" name="date" class="calendare-in">
+					</div>
+					<div class="quest_form-wrap">
+						<span class="modal_consutation-title">Желаемый срок исполнения работ: количество дней / месяцев</span>
+						<div class="quest_form">
+							<div class="modal_input-wrap">
+								<input type="text" class="modal_input" placeholder="Желаемый срок">
+							</div>
+							<p class="quest_form-desc">Прикрепите данные объекта к форме</p>
+							<div class="detail_file">
+								<label class="form_file-label">
+									<input type="file" accept=".pdf, .docx" class="form_file-input">
+									<span class="form_file-title">Прикрепите данные<span class="form_file-btn">Выбрать &gt;</span></span>
+								</label>
+							</div>
+							<div class="detail_btn-wrap">
+								<button class="btn btn-quest">Отправить информацию об объекте</button>
+							</div>
+							<label class="ch">
+		 						<input type="checkbox">
+		 						<span class="card_check ch-policy">Я согласен с политикой конфиденциальности</span>
+			 				</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
 
 	<footer>
 		<div class="footer_top">
@@ -851,6 +986,8 @@
 	<script src="libs/justvalidate.min.js"></script>
 	<script src="libs/slick.min.js"></script>
 	<script src="libs/fancybox.min.js"></script>
+	<script src="libs/datepicker.min.js"></script>
+	<script src="libs/i18n/datepicker.en.js"></script>
 	<script src="js/core.js"></script>
 
 </body>
