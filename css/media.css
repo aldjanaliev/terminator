@@ -266,6 +266,15 @@
   .calendare{
     padding-bottom: 30px;
   }
+  .recycling_flex{
+    flex-direction: column;
+  }
+  .recycling_flex-logo{
+    display: none
+  }
+  .cycle-recycling{
+    width: 100%;
+  }
 }
 @media screen and (max-width: 770px) {
   .section{
@@ -636,6 +645,18 @@
   .modal_input__big{
     width: 100%;
   }
+  .trash_desc{
+    font-size: 18px;
+    padding-bottom: 20px;
+    line-height: 1.3;
+    text-align: left;
+  }
+  .trash{
+    padding-bottom: 20px;
+  }
+  .trash .section-title{
+    text-align: left;
+  }
 }
 @media screen and (max-width: 480px) {
   .tech_logo{
@@ -680,11 +701,8 @@
   .tripple_block__0{
     margin-bottom: 5px;
   }
-  .license_head{
-    width: 190px;
-  }
   .license_acc-body-wrap{
-    width: calc(100% - 190px);
+    width: calc(100% - 150px);
   }
   .license_acc-body__active {
     flex-direction: column;
@@ -715,5 +733,19 @@
   .datepicker--cell-day,
   .datepicker--cells{
     margin: 0;
+  }
+  .recycling_txt-wrap{
+    padding: 10px;
+  }
+  .license_acc-head__active::after{
+    display: none;
+  }
+  .license_head{
+    padding: 15px 15px 0 15px;
+    width: 150px;
+  }
+  .license_acc-head{
+    font-size: 14px;
+    line-height: 14px;
   }
 }

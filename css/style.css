@@ -435,7 +435,7 @@ body {
 }
 .menu_list:hover .submenu{
   opacity: 1;
-  z-index: 10;
+  z-index: 100;
 }
 .submenu{
   opacity: 0;
@@ -458,6 +458,10 @@ body {
 }
 .submenu_list:last-child .submenu_link{
   border-bottom: 1px solid transparent;
+}
+.submenu_link__active{
+  font-weight: 700;
+  pointer-events: none;
 }
 .submenu_link:hover{
   font-weight: 700;
@@ -1070,6 +1074,7 @@ footer .scroll_static {
 .tripple_img img{
   display: block;
   transition: 0.3s;
+  width: 100%;
 }
 .tripple_block:hover .tripple_img img{
   transform: scale(1.05);
@@ -2332,4 +2337,92 @@ input[type="checkbox"]:checked+span::before{
   background: rgba(234, 150, 27, 0.1);
   border-radius: 4px;
   border: none;
+}
+.section-recycling .recycle_flex{
+  flex-direction: column-reverse;
+  margin: 0 auto;
+  max-width: 600px;
+}
+.section-recycling .recycle_info-wrap{
+  width: 100%;
+}
+.section-recycling .recycle_img{
+  width: 100%;
+  margin-bottom: 35px;
+}
+.section-recycling .recycle_info{
+  margin-bottom: 0;
+}
+.section-recycling .recycle_info-wrap{
+  padding: 0;
+}
+.section-recycling .recycle_info-in{
+  border: none;
+  display: flex;
+  padding: 0;
+}
+.recycling_txt-wrap{
+  width: calc(100% - 108px);
+  margin-left: 31px;
+  border: 1px solid #E8E8E8;
+  border-radius: 8px;
+  align-self: stretch;
+  display: flex;
+  padding: 38px;
+}
+.section-recycling .recycle_txt{
+  align-self: center;
+}
+.trash{
+  padding-bottom: 80px;
+}
+.trash .section-title{
+  padding-bottom: 0;
+}
+.trash_desc{
+  text-align: center;
+  font-size: 30px;
+  line-height: 39px;
+  padding-bottom: 50px;
+}
+.trash .recycle_img{
+  margin: 0 auto;
+}
+.cycle-recycling{
+  column-count: 1;
+}
+.cycle_list-title{
+  display: block;
+  font-weight: 700;
+}
+.cycle_list-list{
+  list-style-type: disc;
+}
+.cycle_list-ul{
+  padding-left: 20px;
+}
+.recycling_flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.recycling_flex-logo{
+  max-width: 350px;
+  width: 100%;
+}
+.cycle-recycling{
+  width: calc(100% - 415px);
+}
+.recycling_flex-img{
+  width: 230px;
+  height: 148px;
+  margin: 0 auto;
+  margin-bottom: 23px;
+  display: block;
+}
+.recycling_flex-txt{
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
 }
