@@ -1064,7 +1064,22 @@ footer .scroll_static {
   max-width: 590px;
   width: 100%;
 }
-
+.location{
+  display: inline-block;
+  position: relative;
+}
+.location::after{
+  content: ', ';
+  display: inline-block;
+  padding-right: 8px;
+}
+.location:nth-last-child(2)::after{
+  content: 'и ';
+  padding-left: 10px;
+}
+.location:last-child::after{
+  display: none;
+}
 /*services*/
 .tripple{
   display: flex;

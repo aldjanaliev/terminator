@@ -110,6 +110,25 @@ if(document.querySelector('.contacts_map-list')){
 					item.classList.remove('contacts_map-body__active')
 				})
 				contactsAccBody[contactsAccIndex].classList.add('contacts_map-body__active')
+				// change title
+				let locationParrent = document.querySelector('.locations')
+				let locationFirstElement = document.querySelector('.location')
+				let locationSPB = document.querySelector('.location__spb')
+				let locationKD = document.querySelector('.location__kd')
+				let locationIV = document.querySelector('.location__iv')
+				if(this.classList.contains('contacts_map-title__spb')){
+					console.log(locationParrent)
+					console.log(locationFirstElement)
+					locationParrent.insertBefore(locationSPB, locationFirstElement)
+				} else if(this.classList.contains('contacts_map-title__kd')){
+					console.log(locationParrent)
+					console.log(locationFirstElement)
+					locationParrent.insertBefore(locationKD, locationFirstElement)
+				} else if(this.classList.contains('contacts_map-title__iv')){
+					console.log(locationParrent)
+					console.log(locationFirstElement)
+					locationParrent.insertBefore(locationIV, locationFirstElement)
+				}
 			}
 		}
 	})
