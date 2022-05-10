@@ -40,6 +40,9 @@ body {
   margin: 0 auto;
   padding: 0 160px;
 }
+.pb-0{
+  padding-bottom: 0!important;
+}
 .section{
   padding: 70px 0;
   position: relative;
@@ -624,6 +627,10 @@ input[type="radio"]:checked+span::before {
   border: 0.589852px solid #C2C2C2;
   border-radius: 5px;
   margin: 0 auto;
+  display: none;
+}
+.detail_input__active{
+  display: block;
 }
 .detail_input-wrap{
   padding-bottom: 9px;
@@ -1071,6 +1078,9 @@ footer .scroll_static {
   overflow: hidden;
   margin-bottom: 24px;
 }
+.tripple_block a{
+  display: block;
+}
 .tripple_img img{
   display: block;
   transition: 0.3s;
@@ -1267,6 +1277,7 @@ footer .scroll_static {
   height: 117px;
   overflow: hidden;
   border-radius: 8px;
+  cursor: pointer;
 }
 .object_slider-nav-in img{
   width: 100%;
@@ -1945,8 +1956,43 @@ footer .scroll_static {
 }
 .cycle_list{
   line-height: 20px;
-  padding: 11px 0 13px 60px; 
-  background: url(../img/icons/dote.svg) left 12px no-repeat; 
+  padding: 11px 0 13px 60px;
+  position: relative;
+  cursor: pointer;
+}
+.cycle_list::before{
+  content: '';
+  position: absolute;
+  width: 46px;
+  height: 26px;
+  background: #EA961B;
+  border-radius: 200px;
+  left: 0;
+  top: 11px;
+  transition: 0.3s;
+}
+.cycle_list::after{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  left: 23px;
+  top: 14px;
+  transition: 0.3s;
+}
+.cycle_list:hover::before{
+  background: #FFB800;
+}
+.cycle_list__passive::before{
+  background: #ccc;
+}
+.cycle_list__passive::after{
+  left: 4px;
+}
+.cycle_list__passive:hover::before{
+  background: #ccc;
 }
 .cycle_btn{
   margin: 0 auto;
@@ -1997,6 +2043,7 @@ footer .scroll_static {
   border-radius: 8px;
   position: relative;
   margin-bottom: 30px;
+  padding: 6px;
 }
 .main_video img{
   display: block;
@@ -2103,6 +2150,9 @@ footer .scroll_static {
   line-height: 30px;
   padding-bottom: 29px;
   display: block;
+}
+.modal_consutation-title__pb{
+  padding-bottom: 0;
 }
 .modal_desc{
   font-size: 23px;

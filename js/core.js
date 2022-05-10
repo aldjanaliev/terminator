@@ -62,6 +62,7 @@ $(document).ready(function() {
 		    infinite: true,
 		    slidesToShow: 2,
 		    slidesToScroll: 1,
+		    focusOnSelect: true,
 		    asNavFor: $(this).find('.object_slider'),
 		  });
   	});
@@ -170,6 +171,39 @@ if(document.querySelector('.license_acc-head')){
 	mainVideoClose.onclick = function(){
 		mainVideo.style.display = 'none'
 	}
+}
+
+// form-radio btn
+if(document.querySelectorAll('.form-radio')){
+	let formRadio = document.querySelector('.form-radio__mail')
+	let formRadioAll = document.querySelectorAll('.form-radio')
+	let formRadioInputMail = document.querySelector('.detail_input__mail')
+	let formRadioInputTel = document.querySelector('.detail_input__tel')
+	formRadioAll.forEach(item => {
+		item.onclick = function(){
+			if(formRadio.checked){
+				formRadioInputMail.classList.add('detail_input__active')
+				formRadioInputTel.classList.remove('detail_input__active')
+			} else{
+				formRadioInputMail.classList.remove('detail_input__active')
+				formRadioInputTel.classList.add('detail_input__active')
+			}
+		}
+	})
+}
+
+// main page dotes
+if(document.querySelectorAll('.cycle_list')){
+	let cycleList = document.querySelectorAll('.cycle_list')
+	cycleList.forEach(item => {
+		item.onclick = function(){
+			if(this.classList.contains('cycle_list__passive')){
+				this.classList.remove('cycle_list__passive')
+			} else{
+				this.classList.add('cycle_list__passive')
+			}
+		}
+	})
 }
 
 // modal-btn
