@@ -225,6 +225,69 @@ if(document.querySelectorAll('.cycle_list')){
 	})
 }
 
+// main progress
+if(document.querySelector('.range')){
+	let rangeHeadItem = document.querySelectorAll('.range-head_item')
+	let rangePrice = document.querySelector('.range-price')
+	let rangeInput = [...document.querySelectorAll('.range-input')]
+	rangeHeadItem.forEach(item => {
+		item.onclick = function(){
+			if(!this.classList.contains('range-head_item__active')){
+				rangeHeadItem.forEach(item => {
+					item.classList.remove('range-head_item__active')
+				})
+				this.classList.add('range-head_item__active')
+				// change range-price tabs on click 
+				rangePrice.innerText = this.dataset.price
+				// change range-body tabs on click 
+				let rangeBodyItem = document.querySelectorAll('.range-body')
+				let rangeBodyItemMain = document.querySelector('.range-body__main')
+				let rangeBodyItemIron = document.querySelector('.range-body__iron')
+				let rangeCountNumIron = rangeBodyItemIron.querySelector('.range-count_num')
+				if(this.classList.contains('range-head_item__iron')){
+					rangeBodyItemMain.classList.remove('range-body__active')
+					rangeBodyItemIron.classList.add('range-body__active')
+					rangeInputIron = rangeBodyItemIron.querySelector('.range-input')
+					rangeInputIron.addEventListener('input', function () {
+						totalCalcCount = this.value
+						rangeCountNumIron.value = this.value
+						rangeTotal.innerText = totalCalcCount * +rangePrice.innerText
+					}, false)
+				} else{
+					rangeBodyItemMain.classList.add('range-body__active')
+					rangeBodyItemIron.classList.remove('range-body__active')
+				}
+				// change range-total tabs on click 
+				let rangeTotal = document.querySelector('.range-total')
+				let rangeInputParrent = document.querySelector('.range-body__active')
+				let rangeInput = rangeInputParrent.querySelectorAll('.range-input')
+				let totalCalcCount = 1
+				rangeInput.forEach(item => {
+					totalCalcCount = totalCalcCount * +item.value
+				})
+				rangeTotal.innerText = totalCalcCount * +this.dataset.price
+			}
+		}
+	})
+	let rangeTotal = document.querySelector('.range-total')
+	let rangeBodyMain = document.querySelector('.range-body__main')
+	let rangeBodyIron = document.querySelector('.range-body__iron')
+	let rangeCountNum = rangeBodyMain.querySelectorAll('.range-count_num')
+	let totalCalcCount = 1
+	if(rangeBodyMain.classList.contains('range-body__active')){
+		rangeInput.forEach(item => {
+			item.addEventListener('input', function () {
+				totalCalcCount = rangeInput[0].value * rangeInput[1].value * rangeInput[2].value
+				rangeTotal.innerText = totalCalcCount * +rangePrice.innerText
+				let rangeEventIndex = rangeInput.indexOf(event.target)
+				if(rangeEventIndex != 3){
+					rangeCountNum[rangeEventIndex].value = rangeInput[rangeEventIndex].value
+				}
+			}, false)
+		})
+	} 
+}
+
 // modal-btn
 // if(document.querySelectorAll('.dismantling_btn')){
 // 	let modalBtn = [...document.querySelectorAll('.dismantling_btn')]

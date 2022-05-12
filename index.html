@@ -326,26 +326,85 @@
 					<div class="range">
 						<div class="range-head">
 							<span class="range-head_item__title">Здание из:</span>
-							<span class="range-head_item range-head_item__active">Кирпич</span>
-							<span class="range-head_item">Кирпич + Ж/Б</span>
-							<span class="range-head_item">Ж/Б</span>
-							<span class="range-head_item">Монолит</span>
-							<span class="range-head_item">Металл</span>
+							<span class="range-head_item range-head_item__active" data-price="97">Кирпич</span>
+							<span class="range-head_item" data-price="150">Кирпич + Ж/Б</span>
+							<span class="range-head_item" data-price="180">Ж/Б</span>
+							<span class="range-head_item" data-price="1500">Монолит</span>
+							<span class="range-head_item range-head_item__iron" data-price="7500">Металл</span>
 						</div>
-						<div class="range-body range-body__active">
+						<div class="range-body range-body__main range-body__active">
 							<div class="range-in">
-								<div class="range-in_left">Высота, м <span class="range-in_min">4</span></div>
+								<div class="range-in_left"><span class="range-in_desc">Высота, м </span><span class="range-in_min">4</span></div>
 								<div class="range-in_mid">
-									<input type="range">
+									<input type="range" min="4" max="60" value="10" step="1" class="range-input">
 								</div>
-								<div class="range-in_right"><span class="range-in_max">60</span> м</div>
+								<div class="range-in_right">
+									<span class="range-in_max">60</span>
+									<div class="range-count-wrap">
+										<div class="range-count">
+											<div class="range-count_arrow range-count_left"></div>
+											<input type="text" class="range-count_num" value="10">
+											<div class="range-count_arrow range-count_right"></div>
+										</div>
+									</div>
+								м</div>
+							</div>
+							<div class="range-in">
+								<div class="range-in_left"><span class="range-in_desc">Ширина, м</span><span class="range-in_min">15</span></div>
+								<div class="range-in_mid">
+									<input type="range" min="15" max="250" value="25" step="1" class="range-input">
+								</div>
+								<div class="range-in_right">
+									<span class="range-in_max">250</span>
+									<div class="range-count-wrap">
+										<div class="range-count">
+											<div class="range-count_arrow range-count_left"></div>
+											<input type="text" class="range-count_num" value="25">
+											<div class="range-count_arrow range-count_right"></div>
+										</div>
+									</div>
+								м</div>
+							</div>
+							<div class="range-in">
+								<div class="range-in_left"><span class="range-in_desc">Длина, м</span><span class="range-in_min">15</span></div>
+								<div class="range-in_mid">
+									<input type="range" min="15" max="350" value="25" step="1" class="range-input">
+								</div>
+								<div class="range-in_right">
+									<span class="range-in_max">350</span>
+									<div class="range-count-wrap">
+										<div class="range-count">
+											<div class="range-count_arrow range-count_left"></div>
+											<input type="text" class="range-count_num" value="25">
+											<div class="range-count_arrow range-count_right"></div>
+										</div>
+									</div>
+								м</div>
+							</div>
+						</div>
+						<div class="range-body range-body__iron">
+							<div class="range-in">
+								<div class="range-in_left"><span class="range-in_desc">Вес конструкции, т </span><span class="range-in_min">15</span></div>
+								<div class="range-in_mid">
+									<input type="range" min="15" max="490" value="25" step="1" class="range-input">
+								</div>
+								<div class="range-in_right">
+									<span class="range-in_max">490</span>
+									<div class="range-count-wrap">
+										<div class="range-count">
+											<div class="range-count_arrow range-count_left"></div>
+											<input type="text" class="range-count_num" value="25">
+											<div class="range-count_arrow range-count_right"></div>
+										</div>
+									</div>
+								м</div>
 							</div>
 						</div>
 						<div class="range-footer">
 							<div class="range-footer_half">
 								<span class="range-footer_desc">Приблизительная стоимость работ:</span>
 								<div class="range-footer_total">
-									<span class="range-total">100</span>
+									<span class="range-total">606250</span>
 									<span class="range-footer_cur">руб.</span>
 								</div>
 							</div>
