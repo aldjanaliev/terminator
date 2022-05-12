@@ -269,10 +269,12 @@ if(document.querySelector('.range')){
 			}
 		}
 	})
+	// events on scroll progress line
 	let rangeTotal = document.querySelector('.range-total')
 	let rangeBodyMain = document.querySelector('.range-body__main')
 	let rangeBodyIron = document.querySelector('.range-body__iron')
 	let rangeCountNum = rangeBodyMain.querySelectorAll('.range-count_num')
+	let rangeCountNumAll = document.querySelectorAll('.range-count_num')
 	let totalCalcCount = 1
 	if(rangeBodyMain.classList.contains('range-body__active')){
 		rangeInput.forEach(item => {
@@ -285,7 +287,57 @@ if(document.querySelector('.range')){
 				}
 			}, false)
 		})
-	} 
+	}
+	// events on click range-count_arrow
+	let rangeCountArrowLeft = document.querySelectorAll('.range-count_left')
+	let rangeCountArrowRight = document.querySelectorAll('.range-count_right')
+	rangeCountArrowLeft.forEach(item => {
+		item.onclick = function(){
+			let rangeCountArrowParrent = this.parentElement
+			let rangeCountNum = rangeCountArrowParrent.querySelector('.range-count_num')
+			let rangeCountNumParrent = this.closest('.range-in')
+			let rangeInput = rangeCountNumParrent.querySelector('.range-input')
+			if(rangeCountNum.value > +rangeInput.min){
+				rangeCountNum.value--
+				let rangeInputOld = rangeInput.value
+				rangeInput.value--
+				let rangeTotal = document.querySelector('.range-total')
+				rangeTotal.innerText = rangeTotal.innerText / rangeInputOld * rangeInput.value
+			}
+		}
+	})
+	rangeCountArrowRight.forEach(item => {
+		item.onclick = function(){
+			let rangeCountArrowParrent = this.parentElement
+			let rangeCountNum = rangeCountArrowParrent.querySelector('.range-count_num')
+			let rangeCountNumParrent = this.closest('.range-in')
+			let rangeInput = rangeCountNumParrent.querySelector('.range-input')
+			if(rangeCountNum.value < +rangeInput.max){
+				rangeCountNum.value++
+				let rangeInputOld = rangeInput.value
+				rangeInput.value++
+				let rangeTotal = document.querySelector('.range-total')
+				rangeTotal.innerText = rangeTotal.innerText / rangeInputOld * rangeInput.value
+			}
+		}
+	})
+
+	// events on change range-count_num
+	rangeCountNumAll.forEach(item => {
+		item.addEventListener('change', function () {
+			let rangeCountNumParrent = this.closest('.range-in')
+			let rangeInput = rangeCountNumParrent.querySelector('.range-input')
+			if(+this.value > +rangeInput.max){
+				this.value = rangeInput.max
+			} else if(+this.value < +rangeInput.min){
+				this.value = rangeInput.min
+			}
+			let rangeInputOld = rangeInput.value
+			rangeInput.value = this.value
+			let rangeTotal = document.querySelector('.range-total')
+			rangeTotal.innerText = rangeTotal.innerText / rangeInputOld * rangeInput.value
+		})
+	})
 }
 
 // modal-btn
