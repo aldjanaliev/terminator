@@ -657,6 +657,82 @@
   .trash .section-title{
     text-align: left;
   }
+  .range-head{
+    font-size: 12px;
+    padding-right: 10px;
+  }
+  .range-head span{
+    padding: 4px 10px 6px;
+  }
+  span.range-head_item__title{
+    width: 80px;
+  }
+  .range-in{
+    font-size: 14px;
+  }
+  .range-count_num{
+    font-size: 14px;
+  }
+  .range-footer_half{
+    font-size: 16px;
+  }
+  .range-count{
+    height: 30px;
+    top: -3px;
+  }
+  .range-count_arrow{
+    margin-top: 5px;
+  }
+  .range-body__active{
+    padding: 15px;
+  }
+  .range-in_desc{
+    width: 120px;
+  }
+  .range-in_right{
+    padding-left: 0;
+    width: 110px;
+  }
+  .range-in_max{
+    padding: 0;
+    width: 23px;
+  }
+  .range-in_left{
+    width: 140px;
+  }
+  .range-in_mid {
+    width: calc(100% - 270px);
+  }
+  .range-body__main .range-in_desc{
+    width: 80px;
+  }
+  .range-body__main .range-in_left{
+    width: 100px;
+  }
+  .range-body__main .range-in_mid {
+    width: calc(100% - 230px);
+  }
+  .range-footer_half{
+    max-width: 100%;
+    width: 100%;
+  }
+  .range-footer_half:nth-child(2){
+    order: -1;
+    padding-bottom: 15px;
+  }
+  .range-footer{
+    padding: 15px 15px 30px;
+  }
+  .range-footer_btn{
+    padding-top: 15px;
+  }
+  .range-head_item:hover .range-head_hint,
+  .range-head_item::before{
+    display: none;
+  }
+  .range .cycle_btn{
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 480px) {
   .tech_logo{
@@ -747,5 +823,37 @@
   .license_acc-head{
     font-size: 14px;
     line-height: 14px;
+  }
+  .range-head{
+    padding-right: 0;
+    justify-content: space-around;
+  }
+  span.range-head_item__title{
+    display: none;
+  }
+  .range-head span{
+    padding: 4px 4px 6px;
+  }
+  .range-in{
+    flex-wrap: wrap;
+    padding-bottom: 12px;
+  }
+  .range-in_left{
+    width: 100%!important;
+  }
+  .range-in_mid{
+    width: calc(100% - 115px)!important;
+    position: relative;
+    padding-left: 20px;
+  }
+  .range-in_min{
+    display: none;
+  }
+  .range-in_mid-min{
+    left: 0;
+    top: 1px;
+    width: 15px;
+    position: absolute;
+    display: block;
   }
 }

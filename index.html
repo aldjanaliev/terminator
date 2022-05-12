@@ -326,16 +326,32 @@
 					<div class="range">
 						<div class="range-head">
 							<span class="range-head_item__title">Здание из:</span>
-							<span class="range-head_item range-head_item__active" data-price="97">Кирпич</span>
-							<span class="range-head_item" data-price="150">Кирпич + Ж/Б</span>
-							<span class="range-head_item" data-price="180">Ж/Б</span>
-							<span class="range-head_item" data-price="1500">Монолит</span>
-							<span class="range-head_item range-head_item__iron" data-price="7500">Металл</span>
+							<span class="range-head_item range-head_item__active" data-price="97">
+								<i class="range-head_hint">Здания преимущественно из кирпича. В основном, небольшие жилые дома, пристройки</i>
+								Кирпич
+							</span>
+							<span class="range-head_item" data-price="150">
+								<i class="range-head_hint">Здания из кирпича с железобетонными перекрытиями и др. частями. В основном, многоквартирные жилые дома и административные здания</i>
+								Кирпич + Ж/Б
+							</span>
+							<span class="range-head_item" data-price="180">
+								<i class="range-head_hint">Здания преимущественно из железобетона. В основном, промышленные здания (заводы, фабрики, градирни)</i>
+								Ж/Б
+							</span>
+							<span class="range-head_item" data-price="1500">
+								<i class="range-head_hint">Монолитный железобетонный блок. Например, монолитный фундамент или бетонные плиты</i>
+								Монолит
+							</span>
+							<span class="range-head_item range-head_item__iron" data-price="7500">
+								<i class="range-head_hint">Все типы металлоконструкций (трубы, резервуары, коммуникации), а также металлические части зданий. Любые типы металлов (как черные, так и цветные)</i>
+								Металл
+							</span>
 						</div>
 						<div class="range-body range-body__main range-body__active">
 							<div class="range-in">
 								<div class="range-in_left"><span class="range-in_desc">Высота, м </span><span class="range-in_min">4</span></div>
 								<div class="range-in_mid">
+									<span class="range-in_mid-min">4</span>
 									<input type="range" min="4" max="60" value="10" step="1" class="range-input">
 								</div>
 								<div class="range-in_right">
@@ -352,6 +368,7 @@
 							<div class="range-in">
 								<div class="range-in_left"><span class="range-in_desc">Ширина, м</span><span class="range-in_min">15</span></div>
 								<div class="range-in_mid">
+									<span class="range-in_mid-min">15</span>
 									<input type="range" min="15" max="250" value="25" step="1" class="range-input">
 								</div>
 								<div class="range-in_right">
@@ -368,6 +385,7 @@
 							<div class="range-in">
 								<div class="range-in_left"><span class="range-in_desc">Длина, м</span><span class="range-in_min">15</span></div>
 								<div class="range-in_mid">
+									<span class="range-in_mid-min">15</span>
 									<input type="range" min="15" max="350" value="25" step="1" class="range-input">
 								</div>
 								<div class="range-in_right">
@@ -386,6 +404,7 @@
 							<div class="range-in">
 								<div class="range-in_left"><span class="range-in_desc">Вес конструкции, т </span><span class="range-in_min">15</span></div>
 								<div class="range-in_mid">
+									<span class="range-in_mid-min">15</span>
 									<input type="range" min="15" max="490" value="25" step="1" class="range-input">
 								</div>
 								<div class="range-in_right">
