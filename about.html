@@ -44,7 +44,7 @@
 							<div class="tg_ic"></div>
 							<p class="tg_txt">Телеграм</p>
 						</a>
-						<a href="#" class="top_msg top_msg__tel">
+						<a href="#modal_consutation" class="top_msg top_msg__tel" data-fancybox>
 							<div class="tel_ic"></div>
 							<p class="tel_txt">Заказать быструю консультацию</p>
 						</a>
@@ -257,33 +257,33 @@
 					</div>
 					<div class="license_acc-body-wrap">
 						<div class="license_acc-body license_acc-body__active">
-							<div class="license_acc-body-img">
+							<a class="license_acc-body-img" href="img/license/license-1-1.jpg" data-fancybox>
 								<img src="img/license/license-1.jpg" alt="">
-							</div>
-							<div class="license_acc-body-img">
+							</a>
+							<a class="license_acc-body-img" href="img/license/license-2-1.jpg" data-fancybox>
 								<img src="img/license/license-2.jpg" alt="">
-							</div>
+							</a>
 						</div>
 						<div class="license_acc-body">
-							<div class="license_acc-body-img">
+							<a class="license_acc-body-img" href="img/license/license-3-1.jpg" data-fancybox>
 								<img src="img/license/license-3.jpg" alt="">
-							</div>
-							<div class="license_acc-body-img">
+							</a>
+							<a class="license_acc-body-img" href="img/license/license-4-1.jpg" data-fancybox>
 								<img src="img/license/license-4.jpg" alt="">
-							</div>
+							</a>
 						</div>
 						<div class="license_acc-body">
-							<div class="license_acc-body-img">
+							<a class="license_acc-body-img" href="img/license/license-5-1.jpg" data-fancybox>
 								<img src="img/license/license-5.jpg" alt="">
-							</div>
-							<div class="license_acc-body-img">
+							</a>
+							<a class="license_acc-body-img" href="img/license/license-6-1.jpg" data-fancybox>
 								<img src="img/license/license-6.jpg" alt="">
-							</div>
+							</a>
 						</div>
 						<div class="license_acc-body">
-							<div class="license_acc-body-img">
+							<a class="license_acc-body-img" href="img/license/license-7-1.jpg" data-fancybox>
 								<img src="img/license/license-7.jpg" alt="">
-							</div>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -302,45 +302,77 @@
 			 		<p class="payment_desc">Менеджер сделает расчет по данным объекта и перезвонит в течение 30 минут, чтобы предложить вам лучшие условия и сроки</p>
 			 	</div>
 			 	<div class="payment_form">
-			 		<form action="">
-			 			<div class="detail-form">
-			 				<p class="detail-form_title">Рассчитаем стоимость демонтажа <b>в 1 клик по данным объекта</b></p>
-			 				<p class="detail-form_desc">Прикрепите данные объекта к форме</p>
-			 				<div class="detail_file">
+					<form action="">
+						<div class="detail-form">
+							<p class="detail-form_title">Рассчитаем стоимость демонтажа <b>в 1 клик по данным объекта</b></p>
+							<p class="detail-form_desc">Прикрепите данные объекта к форме</p>
+							<div class="detail_file">
 								<label class="form_file-label">
 									<input type="file" accept=".pdf, .docx" class="form_file-input">
 									<span class="form_file-title">Прикрепите данные<span class="form_file-btn">Выбрать ></span></span>
 								</label>
-			 				</div>
-			 				<div class="detail_radio">
-			 					<p class="detail_radio-txt">Куда вам удобнее получить смету?</p>
-			 					<div class="detail_radio-in">
-			 						<label>
-					 					<input type="radio" name="q1" class="form-radio" checked>
-					 					<span class="wa_ic"></span>
-					 				</label>
-					 				<label>
-					 					<input type="radio" name="q1" class="form-radio">
-					 					<span class="tg_ic"></span>
-					 				</label>
-					 				<label>
-					 					<input type="radio" name="q1" class="form-radio">
-					 					<span class="mail_ic"></span>
-					 				</label>
-			 					</div>
-			 				</div>
-			 				<div class="detail_input-wrap">
-			 					<input type="tel" placeholder="Введите номер телефона" class="detail_input">
-			 				</div>
-			 				<div class="detail_btn-wrap">
-			 					<button class="btn btn-detail">Рассчитать детальную смету</button>
-			 				</div>
-			 			</div>
-			 		</form>
-			 	</div>
+							</div>
+							<div class="detail_radio">
+								<p class="detail_radio-txt">Куда вам удобнее получить смету?</p>
+								<div class="detail_radio-in">
+									<label>
+										<input type="radio" name="q1" class="form-radio" checked>
+										<span class="wa_ic"></span>
+									</label>
+									<label>
+										<input type="radio" name="q1" class="form-radio">
+										<span class="tg_ic"></span>
+									</label>
+									<label>
+										<input type="radio" name="q1" class="form-radio form-radio__mail">
+										<span class="mail_ic"></span>
+									</label>
+								</div>
+							</div>
+							<div class="detail_input-wrap">
+								<input type="tel" placeholder="Введите номер телефона" class="detail_input detail_input__tel detail_input__active">
+								<input type="email" placeholder="Введите почту" class="detail_input detail_input__mail">
+							</div>
+							<div class="detail_btn-wrap">
+								<button class="btn btn-detail">Рассчитать детальную смету</button>
+							</div>
+						</div>
+					</form>
+				</div>
 			 </div>
 		</div>
 	</section>
+
+	<!-- Быстрая консультацию -->
+	<div id="modal_consutation" class="modal-wrap">
+		<form action="">
+			<div class="modal_in">
+				<div class="modal_left">
+					<span class="modal_consutation-title">Оставить заявку на демонтаж</span>
+					<p class="modal_desc">Вы узнаете:</p>
+					<ul>
+						<li class="modal_list">какие работы проводим по сносу и демонтажу;</li>
+						<li class="modal_list">какую разрабатываем докуметацию;</li>
+						<li class="modal_list">как проходит подготовка территории и персонала к демонтажу;</li>
+						<li class="modal_list">стоимость и сроки демонтажа вашего объекта.</li>
+					</ul>
+				</div>
+				<div class="modal_right">
+					<div class="modal_dismantling">
+						<span class="modal_title">Получить быструю консультацию</span>
+						<div class="modal_input-wrap">
+							<span class="modal_input-desc">Введите ваш номер</span>
+							<input type="tel" class="modal_input" placeholder="+7 (905) 425-05-05">
+						</div>
+						<div class="modal_input-wrap">
+							<input type="text" class="modal_input" placeholder="Укажите удобное время для звонка">
+						</div>
+						<button class="modal_btn btn dismantling_btn" type="submit" href="#modal_thanks" data-fancybox>Оставить заявку</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
 
 	<footer>
 		<div class="footer_top">
@@ -354,7 +386,7 @@
 				<div class="footer_top-in">
 					<div class="footer_info">
 						<div class="footer_logo-wrap">
-							<a href="#" class="logo">
+							<a href="index.html" class="logo">
 								<img src="img/icons/logo-bot.svg" alt=""> 
 							</a>
 							<p class="logo_txt">13 лет демонтируем здания <br> любой сложности <b>по всей России</b></p>
@@ -423,11 +455,10 @@
 		<div class="container">
 			<div class="footer_bot">
 				<div class="footer_bot-left">
-					<p>© Copyright 2021. Все права защищены.</p>
+					<p>© Copyright 2022. Все права защищены.</p>
 				</div>
 				<div class="footer_bot-right">
 					<a href="policy.pdf" target="_blank">Политика конфиденциальности</a>
-					<a href="#">Карта сайта</a>
 				</div>
 			</div>
 		</div>

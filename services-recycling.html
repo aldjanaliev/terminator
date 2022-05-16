@@ -155,13 +155,14 @@
 											<span class="tg_ic"></span>
 										</label>
 										<label>
-											<input type="radio" name="q1" class="form-radio">
+											<input type="radio" name="q1" class="form-radio form-radio__mail">
 											<span class="mail_ic"></span>
 										</label>
 									</div>
 								</div>
 								<div class="detail_input-wrap">
-									<input type="tel" placeholder="Введите номер телефона" class="detail_input">
+									<input type="tel" placeholder="Введите номер телефона" class="detail_input detail_input__tel detail_input__active">
+									<input type="email" placeholder="Введите почту" class="detail_input detail_input__mail">
 								</div>
 								<div class="detail_btn-wrap">
 									<button class="btn btn-detail">Рассчитать детальную смету</button>
@@ -328,6 +329,124 @@
 		<div class="container">
 			<div class="calculator">
 				<h3 class="section-title">Калькулятор стоимости работ по демонтажу зданий</h3>
+				<div class="range-wrap">
+					<div class="range">
+						<div class="range-head">
+							<span class="range-head_item__title">Здание из:</span>
+							<span class="range-head_item range-head_item__active" data-price="97">
+								<i class="range-head_hint">Здания преимущественно из кирпича. В основном, небольшие жилые дома, пристройки</i>
+								Кирпич
+							</span>
+							<span class="range-head_item" data-price="150">
+								<i class="range-head_hint">Здания из кирпича с железобетонными перекрытиями и др. частями. В основном, многоквартирные жилые дома и административные здания</i>
+								Кирпич + Ж/Б
+							</span>
+							<span class="range-head_item" data-price="180">
+								<i class="range-head_hint">Здания преимущественно из железобетона. В основном, промышленные здания (заводы, фабрики, градирни)</i>
+								Ж/Б
+							</span>
+							<span class="range-head_item" data-price="1500">
+								<i class="range-head_hint">Монолитный железобетонный блок. Например, монолитный фундамент или бетонные плиты</i>
+								Монолит
+							</span>
+							<span class="range-head_item range-head_item__iron" data-price="7500">
+								<i class="range-head_hint">Все типы металлоконструкций (трубы, резервуары, коммуникации), а также металлические части зданий. Любые типы металлов (как черные, так и цветные)</i>
+								Металл
+							</span>
+						</div>
+						<div class="range-body range-body__main range-body__active">
+							<div class="range-in">
+								<div class="range-in_left"><span class="range-in_desc">Высота, м </span><span class="range-in_min">4</span></div>
+								<div class="range-in_mid">
+									<span class="range-in_mid-min">4</span>
+									<input type="range" min="4" max="60" value="10" step="1" class="range-input">
+								</div>
+								<div class="range-in_right">
+									<span class="range-in_max">60</span>
+									<div class="range-count-wrap">
+										<div class="range-count">
+											<div class="range-count_arrow range-count_left"></div>
+											<input type="text" class="range-count_num" value="10">
+											<div class="range-count_arrow range-count_right"></div>
+										</div>
+									</div>
+								м</div>
+							</div>
+							<div class="range-in">
+								<div class="range-in_left"><span class="range-in_desc">Ширина, м</span><span class="range-in_min">15</span></div>
+								<div class="range-in_mid">
+									<span class="range-in_mid-min">15</span>
+									<input type="range" min="15" max="250" value="25" step="1" class="range-input">
+								</div>
+								<div class="range-in_right">
+									<span class="range-in_max">250</span>
+									<div class="range-count-wrap">
+										<div class="range-count">
+											<div class="range-count_arrow range-count_left"></div>
+											<input type="text" class="range-count_num" value="25">
+											<div class="range-count_arrow range-count_right"></div>
+										</div>
+									</div>
+								м</div>
+							</div>
+							<div class="range-in">
+								<div class="range-in_left"><span class="range-in_desc">Длина, м</span><span class="range-in_min">15</span></div>
+								<div class="range-in_mid">
+									<span class="range-in_mid-min">15</span>
+									<input type="range" min="15" max="350" value="25" step="1" class="range-input">
+								</div>
+								<div class="range-in_right">
+									<span class="range-in_max">350</span>
+									<div class="range-count-wrap">
+										<div class="range-count">
+											<div class="range-count_arrow range-count_left"></div>
+											<input type="text" class="range-count_num" value="25">
+											<div class="range-count_arrow range-count_right"></div>
+										</div>
+									</div>
+								м</div>
+							</div>
+						</div>
+						<div class="range-body range-body__iron">
+							<div class="range-in">
+								<div class="range-in_left"><span class="range-in_desc">Вес конструкции, т </span><span class="range-in_min">15</span></div>
+								<div class="range-in_mid">
+									<span class="range-in_mid-min">15</span>
+									<input type="range" min="15" max="490" value="25" step="1" class="range-input">
+								</div>
+								<div class="range-in_right">
+									<span class="range-in_max">490</span>
+									<div class="range-count-wrap">
+										<div class="range-count">
+											<div class="range-count_arrow range-count_left"></div>
+											<input type="text" class="range-count_num" value="25">
+											<div class="range-count_arrow range-count_right"></div>
+										</div>
+									</div>
+								м</div>
+							</div>
+						</div>
+						<div class="range-footer">
+							<div class="range-footer_half">
+								<span class="range-footer_desc">Приблизительная стоимость работ:</span>
+								<div class="range-footer_total">
+									<span class="range-total">606250</span>
+									<span class="range-footer_cur">руб.</span>
+								</div>
+							</div>
+							<div class="range-footer_half range-footer_half__right">
+								<span class="range-footer_desc">Приблизительная стоимость м3:</span>
+								<div class="range-footer_total">
+									<span class="range-price">97</span>
+									<span class="range-footer_cur">руб.</span>
+								</div>
+							</div>
+							<div class="range-footer_btn">
+								<a href="#modal_dismantling" class="btn cycle_btn" data-fancybox="">Оставить заявку на демонтаж</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="park-wrap">
 				<h3 class="section-title">Собственный парк техники и оборудования</h3>
@@ -337,7 +456,7 @@
 							<img src="img/icons/logo.svg" alt="">
 						</div>
 						<div class="park_img">
-							<img src="img/tech/1.jpg" alt="">
+							<img src="img/tech/1-1.jpg" alt="">
 						</div>
 						<p class="park_txt">Гусеничный экскаватор<br> HITACHI 330</p>
 					</div>
@@ -346,7 +465,7 @@
 							<img src="img/icons/logo.svg" alt="">
 						</div>
 						<div class="park_img">
-							<img src="img/tech/2.jpg" alt="">
+							<img src="img/tech/2-1.jpg" alt="">
 						</div>
 						<p class="park_txt">Гусеничный экскаватор<br> HITACHI 330</p>
 					</div>
@@ -355,7 +474,7 @@
 							<img src="img/icons/logo.svg" alt="">
 						</div>
 						<div class="park_img">
-							<img src="img/tech/3.jpg" alt="">
+							<img src="img/tech/3-1.jpg" alt="">
 						</div>
 						<p class="park_txt">Гусеничный экскаватор<br> HYUNDAI 210<br> <i>c навесным оборудованием</i></p>
 					</div>
@@ -364,7 +483,7 @@
 							<img src="img/icons/logo.svg" alt="">
 						</div>
 						<div class="park_img">
-							<img src="img/tech/4.jpg" alt="">
+							<img src="img/tech/4-1.jpg" alt="">
 						</div>
 						<p class="park_txt">Гусеничный экскаватор<br> HITACHI 330</p>
 					</div>
@@ -373,9 +492,9 @@
 							<img src="img/icons/logo.svg" alt="">
 						</div>
 						<div class="park_img">
-							<img src="img/tech/5.jpg" alt="">
+							<img src="img/tech/5-1.jpg" alt="">
 						</div>
-						<p class="park_txt">Разрушитель 25 метров сат 336</p>
+						<p class="park_txt">Разрушитель 25 метров САТ 336</p>
 					</div>
 					<div class="park_card">
 						<div class="tech_logo">
@@ -395,6 +514,15 @@
 						</div>
 						<p class="park_txt">Тягач с полуприцепом <br><i>для перевозки негабаритных грузов</i></p>
 					</div>
+					<div class="park_card">
+						<div class="tech_logo">
+							<img src="img/icons/logo.svg" alt="">
+						</div>
+						<div class="park_img">
+							<img src="img/tech/trall.jpg" alt="">
+						</div>
+						<p class="park_txt">Трал</p>
+					</div>
 				</div>
 				<p class="park_title">Навесное оборудование</p>
 				<div class="park">
@@ -403,7 +531,7 @@
 							<img src="img/icons/logo.svg" alt="">
 						</div>
 						<div class="park_img">
-							<img src="img/tech/8.jpg" alt="">
+							<img src="img/tech/8-1.jpg" alt="">
 						</div>
 						<p class="park_txt">Гидромолот</p>
 					</div>
@@ -412,7 +540,7 @@
 							<img src="img/icons/logo.svg" alt="">
 						</div>
 						<div class="park_img">
-							<img src="img/tech/9.jpg" alt="">
+							<img src="img/tech/9-2.jpg" alt="">
 						</div>
 						<p class="park_txt">Крашер (бетонолом)<br> механический</p>
 					</div>
@@ -421,7 +549,7 @@
 							<img src="img/icons/logo.svg" alt="">
 						</div>
 						<div class="park_img">
-							<img src="img/tech/10.jpg" alt="">
+							<img src="img/tech/10-1.jpg" alt="">
 						</div>
 						<p class="park_txt">Крашер гидравлический<br> для первичного демонтажа</p>
 					</div>
@@ -430,7 +558,7 @@
 							<img src="img/icons/logo.svg" alt="">
 						</div>
 						<div class="park_img">
-							<img src="img/tech/11.jpg" alt="">
+							<img src="img/tech/11-1.jpg" alt="">
 						</div>
 						<p class="park_txt">Удлиненная стрела<br> для разрушений</p>
 					</div>
@@ -472,37 +600,40 @@
 							<img src="img/icons/logo.svg" alt="">
 						</div>
 						<ul class="license_acc-head-wrap">
-							<li class="license_acc-head license_acc-head__active">Сертификат системы экологического менеджмента</li>
-							<li class="license_acc-head">Сертификат соостветствия аудитора</li>
-							<li class="license_acc-head">Свидетельство из реестра надежных партнеров</li>
-							<li class="license_acc-head">Лицензия на перемещение и переработку строительных отходов</li>
-							<li class="license_acc-head">Сертификат на продукцию - дробленый бой и кирпича</li>
+							<li class="license_acc-head license_acc-head__active">Выписка из реестра членов саморегулируемой организации</li>
+							<li class="license_acc-head">Разрешение на применение знака соответствия системы сертификации “МСМ-Стандарт”</li>
+							<li class="license_acc-head">Сертификат соответствия безопасности труда и охраны здоровья</li>
+							<li class="license_acc-head">Сертификат соответствия безопасности труда и охраны здоровья</li>
 						</ul>
 					</div>
 					<div class="license_acc-body-wrap">
 						<div class="license_acc-body license_acc-body__active">
-							<a class="license_acc-body-img" href="img/license/license-1.jpg" data-fancybox>
+							<a class="license_acc-body-img" href="img/license/license-1-1.jpg" data-fancybox>
 								<img src="img/license/license-1.jpg" alt="">
 							</a>
-						</div>
-						<div class="license_acc-body">
-							<a class="license_acc-body-img" href="img/license/license-2.jpg" data-fancybox>
+							<a class="license_acc-body-img" href="img/license/license-2-1.jpg" data-fancybox>
 								<img src="img/license/license-2.jpg" alt="">
 							</a>
 						</div>
 						<div class="license_acc-body">
-							<a class="license_acc-body-img" href="img/license/license-3.jpg" data-fancybox>
+							<a class="license_acc-body-img" href="img/license/license-3-1.jpg" data-fancybox>
 								<img src="img/license/license-3.jpg" alt="">
 							</a>
-						</div>
-						<div class="license_acc-body">
-							<a class="license_acc-body-img" href="img/license/license-4.jpg" data-fancybox>
+							<a class="license_acc-body-img" href="img/license/license-4-1.jpg" data-fancybox>
 								<img src="img/license/license-4.jpg" alt="">
 							</a>
 						</div>
 						<div class="license_acc-body">
-							<a class="license_acc-body-img" href="img/license/license-5.jpg" data-fancybox>
+							<a class="license_acc-body-img" href="img/license/license-5-1.jpg" data-fancybox>
 								<img src="img/license/license-5.jpg" alt="">
+							</a>
+							<a class="license_acc-body-img" href="img/license/license-6-1.jpg" data-fancybox>
+								<img src="img/license/license-6.jpg" alt="">
+							</a>
+						</div>
+						<div class="license_acc-body">
+							<a class="license_acc-body-img" href="img/license/license-7-1.jpg" data-fancybox>
+								<img src="img/license/license-7.jpg" alt="">
 							</a>
 						</div>
 					</div>
@@ -515,7 +646,7 @@
 		<div class="container">
 			<div class="observ">
 				<div class="observ_img">
-					<img src="img/mobile.png" alt="">
+					<img src="img/mobile.svg" alt="">
 				</div>
 				<p class="observ_txt">На каждом объекте устанавливаем <i>видеонаблюдение</i></p>
 			</div>
@@ -569,13 +700,14 @@
 										<span class="tg_ic"></span>
 									</label>
 									<label>
-										<input type="radio" name="q1" class="form-radio">
+										<input type="radio" name="q1" class="form-radio form-radio__mail">
 										<span class="mail_ic"></span>
 									</label>
 								</div>
 							</div>
 							<div class="detail_input-wrap">
-								<input type="tel" placeholder="Введите номер телефона" class="detail_input">
+								<input type="tel" placeholder="Введите номер телефона" class="detail_input detail_input__tel detail_input__active">
+								<input type="email" placeholder="Введите почту" class="detail_input detail_input__mail">
 							</div>
 							<div class="detail_btn-wrap">
 								<button class="btn btn-detail">Рассчитать детальную смету</button>
@@ -583,13 +715,17 @@
 						</div>
 					</form>
 				</div>
-			</div>
+		</div>
 		</div>
 	</section>
 	
 	<section class="section section-contacts">
 		<div class="container">
-			<h3 class="section-title">Наши офисы находятся в городах Санкт-Петербург, Краснодар и Иваново</h3>
+			<h3 class="section-title">Наши офисы находятся в городах 
+				<span class="locations">
+					<span class="location location__spb">Санкт-Петербург</span><span class="location location__kd">Краснодар</span><span class="location location__iv">Иваново</span>
+				</span>
+			</h3>
 			<div class="contacts">
 				<div class="contacts_info">
 					<div class="top">
@@ -629,9 +765,9 @@
 				</div>
 				<div class="contacts_map-wrap">
 					<ul class="contacts_map-list" style="height: 50px">
-						<li class="contacts_map-title contacts_map-title__active">Санкт-Петербург,  Уманский Переулок, д. 72Р</li>
-						<li class="contacts_map-title">Краснодар ул. Арсения, д. 37</li>
-						<li class="contacts_map-title">Иваново ул. Арсения, д. 37</li>
+						<li class="contacts_map-title contacts_map-title__active contacts_map-title__spb">Санкт-Петербург,  Уманский Переулок, д. 72Р</li>
+						<li class="contacts_map-title contacts_map-title__kd">Краснодар ул. Арсения, д. 37</li>
+						<li class="contacts_map-title contacts_map-title__iv">Иваново ул. Арсения, д. 37</li>
 					</ul>
 					<ul class="contacts_map">
 						<li class="contacts_map-body contacts_map-body__active">
@@ -722,7 +858,7 @@
 					<li class="object_list">В течение 15 минут мы отправим Вам ПДФ книгу о демонтаже зданий c разрешительной документацией для сноса.</li>
 				</ul>
 				<div class="modal_input-wrap">
-					<span class="modal_input-desc">Введите ваш номер</span>
+					<span class="modal_input-desc">Информация о заказчике</span>
 					<div class="modal_inputs">
 						<input type="text" class="modal_input" placeholder="Ф. И. О., должность">
 						<input type="text" class="modal_input" placeholder="Наименование организации">
@@ -758,7 +894,7 @@
 					</div>
 				</div>
 				<div class="choose">
-					<span class="modal_consutation-title">Выберите, какие работы и услуги необходимо выполнить</span>
+					<span class="modal_consutation-title modal_consutation-title__pb">Выберите, какие работы и услуги необходимо выполнить</span>
 					<div class="choose-in">
 						<div class="choose_half">
 							<label class="ch">
@@ -927,11 +1063,10 @@
 		<div class="container">
 			<div class="footer_bot">
 				<div class="footer_bot-left">
-					<p>© Copyright 2021. Все права защищены.</p>
+					<p>© Copyright 2022. Все права защищены.</p>
 				</div>
 				<div class="footer_bot-right">
 					<a href="policy.pdf" target="_blank">Политика конфиденциальности</a>
-					<a href="#">Карта сайта</a>
 				</div>
 			</div>
 		</div>

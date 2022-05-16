@@ -117,16 +117,10 @@ if(document.querySelector('.contacts_map-list')){
 				let locationKD = document.querySelector('.location__kd')
 				let locationIV = document.querySelector('.location__iv')
 				if(this.classList.contains('contacts_map-title__spb')){
-					console.log(locationParrent)
-					console.log(locationFirstElement)
 					locationParrent.insertBefore(locationSPB, locationFirstElement)
 				} else if(this.classList.contains('contacts_map-title__kd')){
-					console.log(locationParrent)
-					console.log(locationFirstElement)
 					locationParrent.insertBefore(locationKD, locationFirstElement)
 				} else if(this.classList.contains('contacts_map-title__iv')){
-					console.log(locationParrent)
-					console.log(locationFirstElement)
 					locationParrent.insertBefore(locationIV, locationFirstElement)
 				}
 			}
@@ -184,7 +178,7 @@ if(document.querySelectorAll('.license_acc-head')){
 }
 
 // close video
-if(document.querySelector('.license_acc-head')){
+if(document.querySelector('.main_video')){
 	let mainVideo = document.querySelector('.main_video')
 	let mainVideoClose = document.querySelector('.main_video-close')
 	mainVideoClose.onclick = function(){
@@ -194,13 +188,14 @@ if(document.querySelector('.license_acc-head')){
 
 // form-radio btn
 if(document.querySelectorAll('.form-radio')){
-	let formRadio = document.querySelector('.form-radio__mail')
 	let formRadioAll = document.querySelectorAll('.form-radio')
-	let formRadioInputMail = document.querySelector('.detail_input__mail')
-	let formRadioInputTel = document.querySelector('.detail_input__tel')
 	formRadioAll.forEach(item => {
 		item.onclick = function(){
-			if(formRadio.checked){
+			let formRadioParent = item.closest('.detail-form')
+			let formRadioMail = formRadioParent.querySelector('.form-radio__mail')
+			let formRadioInputMail = formRadioParent.querySelector('.detail_input__mail')
+			let formRadioInputTel = formRadioParent.querySelector('.detail_input__tel')
+			if(formRadioMail.checked){
 				formRadioInputMail.classList.add('detail_input__active')
 				formRadioInputTel.classList.remove('detail_input__active')
 			} else{
